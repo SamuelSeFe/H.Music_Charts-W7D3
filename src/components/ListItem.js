@@ -4,7 +4,7 @@ const ListItem = ({song}) => {
     return (<li>
             <h2>{song.title.label}</h2>
             <img src={song["im:image"][2].label} />
-            <audio controls>
+            <audio controls key={song.link[1].attributes.href}>
                 <source src={song.link[1].attributes.href} type="audio/aac"/>
             </audio>
         </li>)
